@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=DM+Sans:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Space+Mono:700&display=swap');
 
-/* 
+/*
 
 Así se escriben los comentario en CSS.
 Siempre se abren con slash asterisco, y
@@ -10,24 +10,32 @@ se cierran con asterisco slash.
 */
 
 *{
-    margin:0;
-    padding:0;
-}
+    margin:50;
+    padding:20;
+} /*Aumenta el porte de los cuadros de los gifs*/
 
 body{
-    font-family:'DM Sans', sans-serif;
+    font-family:'Renner*', sans-serif;
     font-weight:400;
     color:#373737;
-    background-color:#FFFFFF; /*el primer par es R, segundo es G y tercero es B*/
+    background-image:url('media/gipi.gif');   /*Este es el fondo de arcoiris*/
+    text-align: right;
+    font-size:1.5rem;
 }
 
-h1, h2{
-    font-family:'Space Mono', monospace;
+h1{    font-family:'Little Pea - Demo', monospace;
     color:#FFFFFF; /* lo básico, para evitar problemas */
-    color:rgba(255,255,255,0.8); /* si el navegador lo entiende, lo usa */
+    color:rgba(255,255,255,255); /* si el navegador lo entiende, lo usa */
     text-align:center;
     letter-spacing:0.1em;
-    font-weight:700;
+    font-weight:1;
+} h2{
+    font-family:'Sunset Boulevard', monospace;
+    color:#FFFFFF; /* lo básico, para evitar problemas */
+    color:rgba(255,255,255,255); /* si el navegador lo entiende, lo usa */
+    text-align:center;
+    letter-spacing:0.1em;
+    font-weight:1;
 }
 
 h1{
@@ -35,18 +43,18 @@ h1{
 }
 
 h2{
-    font-size:2rem;
+    font-size:5rem;
     letter-spacing:0.1em;
 }
 
 @media screen and (max-width: 768px){
-    h1{ font-size:2.25rem; }
-    h2{ font-size:1.5rem; }
+    h1{ font-size:1rem; }
+    h2{ font-size:2rem; }
 }
 
 @media screen and (max-width: 576px){
-    h1{ font-size:1.5rem; }
-    h2{ font-size:1rem; }
+    h1{ font-size:1rem; }
+    h2{ font-size:1.5rem; }
 }
 
 h3{
@@ -54,11 +62,11 @@ h3{
 }
 
 h5, h6{
-    font-weight:700;     
+    font-weight:700;
 }
 
 a{
-    color:rgb(155,0,0);
+    color:#8F80F9;/*Esto controla el color del boton ver mas*/
     text-decoration:none;
 }
 
@@ -89,9 +97,9 @@ main{
     width:100%;
 }
 
-/* 
-Puedes revisar detalles sobre el siguiente uso de flex 
-en https://www.taniarascia.com/easiest-flex-grid-ever/ 
+/*
+Puedes revisar detalles sobre el siguiente uso de flex
+en https://www.taniarascia.com/easiest-flex-grid-ever/
 */
 
 #equipo {
@@ -99,11 +107,11 @@ en https://www.taniarascia.com/easiest-flex-grid-ever/
     flex-direction: row;
     flex-wrap: wrap;
     color:#fff /* lo mismo que #FFFFFF, simplificando pares iguales*/;
-    color:rgba(255,255,255,1);
+    color:rgba(255,255,255,255);
 }
 
 #equipo a{
-    color:rgba(255,255,255,.7);
+    color:rgba(255,255,255,0.8); /*No se como influye en el mail*/
 }
 
 #equipo a:hover{
@@ -121,11 +129,11 @@ en https://www.taniarascia.com/easiest-flex-grid-ever/
 @media screen and (orientation: landscape){
     .integrante { flex:1; }
 }
-
+/*Esto es el temaño de la franja*/
 .integrante h4{
     padding: 2rem 2rem 0.25rem 2rem;
 }
-
+/* Esto es el mail*/
 .integrante address{
     padding: 0.25rem 2rem;
     font-size:0.9em;
@@ -142,15 +150,17 @@ en https://www.taniarascia.com/easiest-flex-grid-ever/
         max-width:50%;
     }
 }
-
+/* Esto es la cita de abajo*/
 .integrante blockquote cite {
     display:block;
+    font-family: 'Renner*';
     font-style: normal;
     font-weight: 700;
-    font-size:.8rem;
+    font-size:1rem;
     letter-spacing : 0.1rem;
     padding-top:0.25rem;
-    color:rgba(255,255,255,.75);
+    color:#ad1457;
+    text-align: right;
 }
 
 .integrante blockquote cite:before {
@@ -158,51 +168,36 @@ en https://www.taniarascia.com/easiest-flex-grid-ever/
 }
 
 .integrante:nth-of-type(1){
-    background-color:#F83277;
-    background-image:url('media/integrante-1a.png');
-    background-position: bottom right;
-    background-size:auto 90%;
+    background:linear-gradient(to bottom, #f5b468, #fce483);
+    background-image:url('media/Foto Tere.png');
+    background-position: bottom center;
+    background-size:auto 100%;
     background-repeat: no-repeat;
 }
 
 
 .integrante:nth-of-type(2){
-    background:#F93332;
-    background-image:url('media/integrante-2a.png');
-    background-position: bottom right;
-    background-size:auto 90%;
-    background-repeat: no-repeat;
-}
-
-.integrante:nth-of-type(3){
-    background:#FA7633;
-    background-image:url('media/integrante-3a.png');
-    background-position: bottom right;
-    background-size:auto 90%;
+    background:linear-gradient(to bottom, #f5b468, #fce483);
+    background-image:url('media/Foto Benja.png');
+    background-position: bottom center;
+    background-size:auto 100%;
     background-repeat: no-repeat;
 }
 
 .integrante:nth-of-type(1):hover{
-    background-color:#c2185b;
-    background-image:url('media/integrante-1b.png');
-    background-position: bottom right;
-    background-size:auto 90%;
+    background-color:#cac9ca;
+    background-image:url('media/Gif Tere.gif');
+    background-position: bottom center;
+    background-size:auto 100%;
     background-repeat: no-repeat;
+
 }
 
 .integrante:nth-of-type(2):hover{
-    background:#d32f2f;
-    background-image:url('media/integrante-2b.png');
-    background-position: bottom right;
-    background-size:auto 90%;
-    background-repeat: no-repeat;
-}
-
-.integrante:nth-of-type(3):hover{
-    background:#ef6c00;
-    background-image:url('media/integrante-3b.png');
-    background-position: bottom right;
-    background-size:auto 90%;
+    background:#cac9ca;
+    background-image:url('media/Gif Benja.gif');
+    background-position: bottom center;
+    background-size:auto 100%;
     background-repeat: no-repeat;
 }
 
@@ -215,31 +210,31 @@ AHORA VAMOS POR PORTAFOLIO
 #portafolio{
     width:100%;
     padding:.25% 0;
-    background:linear-gradient(to bottom, #EEEEEE, #AAAAAA);
+    background:linear-gradient(to bottom, #fce483, #f5b468);
 }
 
 .item {
     width:23%;
     margin:1%;
-    color:#333;
-    background:#eee;
+    color:#FFFFFF; /* Color letras portafolio */
+    background-image:url('media/gal.gif') ; /* Color recuadro portafolio */
     box-shadow:0 0 5px rgba(0,0,0,.5);
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 770px){
     .item{
         width:48%;
         margin:1%;
-        background:#333;
-        color:#eee;
+        background:#fcb4e4;
+        color:#fff;     /*Este es el color de las letras cuando se achica un poco la pantalla*/
     }
 }
- @media screen and (max-width: 576px){
+ @media screen and (max-width: 570px){
      .item{
          width:96%;
          margin:2%;
-         background:#000;
-         color:#FFF;
+         background:#fcb4e4;
+         color:#fff;         /*Mas chico aun*/
     }
 }
  .item:hover{
@@ -260,12 +255,12 @@ AHORA VAMOS POR PORTAFOLIO
      transition:all ease-out 1s;
 }
  .item h4{
-     font-size:1em;
+     font-size:1.2rem;
      letter-spacing:0.025em;
      margin:5% 5% 3% 5%;
 }
  .item p{
-     font-size:0.875em;
+     font-size:1rem;
      letter-spacing:0.05em;
      margin:2% 5% 6% 5%;
 }
@@ -273,9 +268,13 @@ AHORA VAMOS POR PORTAFOLIO
      width:100%;
      padding:2.5em 0 2em 0;
      text-align:center;
+     color:#fff
 }
  footer p{
      text-transform:uppercase;
      letter-spacing:0.1em;
-     font-size:0.9em;
+     font-size:1rem;
+
+
+
 }
