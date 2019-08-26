@@ -1,3 +1,3 @@
 # banduc-joannon
 Portafolio
-_El mejor grupo_
+Estudiantes de Diseño de la Pontificia Universidad Católica
